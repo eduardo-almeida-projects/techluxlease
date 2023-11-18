@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site</title>
+    <style>
+            img {
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    </style>
 </head>
 <body>
     <img src="testsite.png" alt="" srcset="" style="
@@ -19,4 +29,28 @@
         width: 100%;
         ">
 </body>
+<script>
+    let counter = 0;
+    const intervalTime = 1000; // intervalo em milissegundos (1 segundo)
+
+    function startCounter() {
+      console.log("Contador iniciado.");
+
+      const intervalId = setInterval(() => {
+        counter++;
+        console.clear(); // Limpa o console para exibir apenas o valor atual
+        console.log(`Valor atual do contador: ${counter}`);
+      }, intervalTime);
+
+      // Exemplo: Parar o contador após 10 segundos
+      setTimeout(() => {
+        clearInterval(intervalId);
+        console.log("Contador parado.");
+        window.alert('Faça já seu cadastro clicando em ME TORNAR MEMBRO')
+      }, 10000);
+    }
+
+    // Iniciar o contador quando a página carregar
+    startCounter();
+</script>
 </html>
